@@ -1,0 +1,20 @@
+/* Full-page background */
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0;
+    height: 100vh; /* Make body full screen height */
+    background-image: url('../asset/icas.png'); /* Your photo */
+    background-size: cover;       /* Cover entire screen */
+    background-repeat: no-repeat; /* Don't repeat the image */
+    background-position: center;  /* Center the image */
+    font-family: Arial, sans-serif;
+    color: white;                 /* Text color for contrast */
+}
+
+/* Example overlay text */
+h1 {
+    text-align: center;
+    margin-top: 40vh; /* Center vertically */
+    font-size: 3em;
+    text-shadow: 2px 2px 5px black; /* Makes text readable */
+}
