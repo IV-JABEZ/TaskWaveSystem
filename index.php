@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TaskWave - Welcome</title>
-<img src="../asset/icas.png" alt="style.css">
+<link rel="stylesheet" href="assets\style.css" />
+
 <style>
 *{
     margin:0;
@@ -18,8 +19,7 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    background: linear-gradient(-45deg,#4facfe,#00f2fe,#43e97b,#38f9d7);
-    background-size:400% 400%;
+
     animation: gradientMove 10s ease infinite;
 }
 
@@ -83,13 +83,14 @@ p{
     transform:translateY(-5px);
     transition:0.3s;
 }
-</style>
+</style> 
 </head>
 
 <body>
 
 <div class="container">
     <h1>WELCOME</h1>
+     <p>    </p>
     <h2>TASKWAVE SYSTEM</h2>
     <p>Smart Task Management System</p>
 
