@@ -1,6 +1,7 @@
 <?php
 session_start();
 include "../include/db.php";
+ 
 
 // Ensure logged-in employee
 if(!isset($_SESSION['user']) || $_SESSION['position'] !== 'employee'){
@@ -119,7 +120,7 @@ button.action-btn{
 <body>
 
 <!-- Include Employee Sidebar -->
-<?php include "../Employee/employee_sidebar.php"; ?>
+<?php include "../sidebar.php"; ?>
 
 <!-- Main content -->
 <div class="main">

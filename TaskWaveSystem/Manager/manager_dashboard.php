@@ -30,43 +30,12 @@ $tasks = $conn->query("
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Manager Dashboard - TaskWave</title>
-<link rel="stylesheet" href="assets\style.css" />
+<link rel="stylesheet" href="assets/style.css" />
 <style>
-/* Sidebar */
-.sidebar{
-    width:250px;
-    height:100vh;
-    background:#1e293b;
-    color:white;
-    position:fixed;
-    top:0;
-    left:0;
-    padding:20px;
-}
-
-.sidebar h2{
-    text-align:center;
-    margin-bottom:30px;
-}
-
-.sidebar a{
-    display:block;
-    color:white;
-    text-decoration:none;
-    padding:12px;
-    margin-bottom:10px;
-    border-radius:6px;
-    transition:0.3s;
-}
-
-.sidebar a:hover{
-    background:#334155;
-}
-
-/* Main content shifted to the right of sidebar */
+/* Sidebar styling will now come from sidebar.php */
 .main{
-    margin-left:300px; /* same as sidebar width */
-    padding:10px;
+    margin-left:260px; /* adjusted for sidebar width */
+    padding:20px;
 }
 
 /* Header */
@@ -88,13 +57,12 @@ button.delete{background:#FF5252;}
 <body>
 
 <!-- Include Sidebar -->
-<?php include "manager_sidebar.php"; ?>
+<?php include "../sidebar.php"; ?>
 
 <!-- Main content -->
 <div class="main">
     <header>
         <h2>Manager Dashboard</h2>
-    
     </header>
 
     <!-- Employee List -->
