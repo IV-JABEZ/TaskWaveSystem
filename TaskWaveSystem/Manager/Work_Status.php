@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../includes/db.php';
+include '../include/db.php';
 
 if(!isset($_SESSION['user_id']) || $_SESSION['position'] !== 'manager'){
     header("Location: ../index.php");

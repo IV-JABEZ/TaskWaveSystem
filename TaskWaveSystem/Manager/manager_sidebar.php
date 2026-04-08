@@ -11,7 +11,7 @@
         <li><a href="task_assign.php">📋 <span>Tasks Assign</span></a></li>
         <li><a href="work_status.php">📊 <span>Work Status</span></a></li>
         <li><a href="settings.php">⚙️ <span>Settings</span></a></li>
-        <li><a href="logout.php" class="logout">🚪 <span>Logout</span></a>
+        <a href="../logout.php">🚪 Logout</a>
     </ul>
 </div>
 

@@ -105,16 +105,14 @@ button.delete{background:#FF5252;}
                 <th>Name</th>
                 <th>Email</th>
                 <th>Role</th>
-                <th>Actions</th>
+               
             </tr>
             <?php while($emp = $employees->fetch_assoc()): ?>
             <tr>
                 <td><?php echo htmlspecialchars($emp['name']); ?></td>
                 <td><?php echo htmlspecialchars($emp['email']); ?></td>
                 <td><?php echo htmlspecialchars($emp['employee_role']); ?></td>
-                <td>
-                    <button class="action-btn" onclick="openAssignModal(<?php echo $emp['id']; ?>)">Assign Task</button>
-                </td>
+                
             </tr>
             <?php endwhile; ?>
         </table>
@@ -140,7 +138,7 @@ button.delete{background:#FF5252;}
                 <td><?php echo htmlspecialchars($task['deadline']); ?></td>
                 <td><?php echo htmlspecialchars($task['status']); ?></td>
                 <td>
-                    <a href='task_assign.php?employee_id={$row['id']}' class='btn assign'>Assign Task</a>
+                    
                     <a href="update_task.php?id=<?php echo $task['id']; ?>"><button class="action-btn">Update</button></a>
                     <a href="delete_task.php?id=<?php echo $task['id']; ?>" onclick="return confirm('Delete this task?')"><button class="action-btn delete">Delete</button></a>
                 </td>
@@ -150,29 +148,3 @@ button.delete{background:#FF5252;}
     </section>
 </div>
 
-<!-- Assign Task Modal -->
-<div class="modal" id="taskModal">
-<div class="modal-content">
-<h3>Assign Task</h3>
-<form method="POST" action="task_assigned.php">
-<input type="hidden" name="employee_id" id="employee_id">
-<input type="text" name="title" placeholder="Task Title" required>
-<textarea name="description" placeholder="Task Description"></textarea>
-<input type="date" name="deadline" required>
-<button type="submit" name="add_task">Assign</button>
-<button type="button" onclick="closeModal()">Cancel</button>
-</form>
-</div>
-</div>
-
-<script>
-function openAssignModal(id){
-    document.getElementById("employee_id").value=id;
-    document.getElementById("taskModal").style.display="flex";
-}
-function closeModal(){
-    document.getElementById("taskModal").style.display="none";
-}
-</script>
-</body>
-</html>

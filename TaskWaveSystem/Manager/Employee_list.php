@@ -54,7 +54,7 @@
                 <td>{$row['id']}</td>
                 <td>👤 {$row['name']}</td>
                 <td>
-            
+                    
                     <a href='?delete={$row['id']}' class='btn delete' onclick='return confirm(\"Delete this employee?\")'>Delete</a>
                 </td>
             </tr>

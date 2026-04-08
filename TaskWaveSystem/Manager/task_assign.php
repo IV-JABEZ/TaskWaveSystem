@@ -7,6 +7,23 @@ if(!isset($_SESSION['user_id']) || $_SESSION['position'] !== 'manager'){
     exit();
 }
 
+// Assign Task
+if(isset($_POST['assign'])){
+    $employee_id = $_POST['employee_id'];
+    $title = $_POST['title'];
+    $description = $_POST['description'];
+    $deadline = $_POST['deadline'];
+    $manager_id = $_SESSION['user_id'];
+
+    $stmt = $conn->prepare("INSERT INTO tasks (title, description, manager_id, employee_id, deadline, status) 
+        VALUES (?, ?, ?, ?, ?, 'Pending')");
+    $stmt->bind_param("ssiis", $title, $description, $manager_id, $employee_id, $deadline);
+    $stmt->execute();
+    $stmt->close();
+
+    header("Location: task_assign.php");
+    exit();
+}
 
 // Fetch employees for dropdown
 $employees = $conn->query("SELECT * FROM user WHERE position='employee'");
