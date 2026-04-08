@@ -50,7 +50,8 @@ $tasks = $conn->query("SELECT t.id, t.title, t.description, t.deadline, t.status
     margin-bottom:10px;
     border-radius:6px;
     transition:0.3s;
-}
+}cd TaskWaveSystem
+rm -rf .git
 
 .sidebar a:hover{
     background:#334155;

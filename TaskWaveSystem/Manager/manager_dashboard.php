@@ -140,6 +140,7 @@ button.delete{background:#FF5252;}
                 <td><?php echo htmlspecialchars($task['deadline']); ?></td>
                 <td><?php echo htmlspecialchars($task['status']); ?></td>
                 <td>
+                    <a href='task_assign.php?employee_id={$row['id']}' class='btn assign'>Assign Task</a>
                     <a href="update_task.php?id=<?php echo $task['id']; ?>"><button class="action-btn">Update</button></a>
                     <a href="delete_task.php?id=<?php echo $task['id']; ?>" onclick="return confirm('Delete this task?')"><button class="action-btn delete">Delete</button></a>
                 </td>
